@@ -9,11 +9,8 @@ $(document).ready(function() {
                 let officialName = country.name.official;
                 let capital = (country.capital) ? country.capital : 'No capital to display';
                 let region = country.region;
-                languages = '';
-                /* let languages = Object.values(country.languages); */
-                /* let languages = Object.values(country.languages);
-                let langString = languages */
-                /* let langString = (languages.length > 0) ? languages.toString() : 'No language to display'; */
+                let languagesObj = country.languages;
+                let languages = (languagesObj) ? Object.values(languagesObj).join(', ') : 'No languages to display';
                 let population = country.population;
                 let flag = country.flags.png;
                 tableContent += `<tr>
